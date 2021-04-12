@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+/*
+*/
+.box-header{
+    position: relative;
+    width: 100%;
+    height: 42.82vw;
+}
+.box-headerFund, .headerFund{ width: 100%;}
+.box-imgStar 
+{ 
+    position: absolute;
+    top: 23.5vw;
+    left: 19.0625vw;
+    width: 23.802083vw
+}
+
+.box-imgWars 
+{ 
+    position: absolute;
+    top: 23.5vw;
+    left: 64.79166vw;
+    width: 26.09375vw
+}
+.imgStar, .imgWars { width: 100%; }
+
+.box-imgKylo{
+    position: absolute;
+    top: 0;
+    left: 10vw;
+    width: 70.46875vw;
+}
+.imgKylo{ width: 100%; }
+
+.box-createLegion{
+    position: absolute;
+    bottom: 0;
+    left: 79.166vw;
+    width: 9.140625vw;
+}
+
+.box-LegionTxt {}
+.LegionTxt {font-size: 1.54vw; text-transform: uppercase;}
+
+.divider-legion {
+    width: 100%; 
+    background-color:black; 
+    height: .18vw;
+    margin: 1vw 0;
+}
+
+.box-index{
+    display: flex;
+    align-items: flex-end;
+}
+
+.index-selected {font-size: 1.45vw;} 
+.index-total {font-size: 1.2vw;}
+
+.bt-backIndex, .bt-nextIndex{
+    width: 1.2vw;
+    height: 1.2vw;
+    font-size: 1.2vw;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    background-color: rgb(169, 189, 193);
+    color: black;
+}
+
+.bt-backIndex {margin-left: .8vw; margin-right: .5vw;}
