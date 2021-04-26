@@ -1,20 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: content-box;
 }
 
-body{
-    width: 100%;
-    height: 100%;
+@font-face {
+    font-family: Sovereign;
+    src: url("../assets/fonts/Sovereign.otf");
 }
+
+span{font-weight: 800;}
 
 .container{
     position: relative;
     width: 86vw;/*85vw*/
     margin: auto;
 }
-
 /* ------------------------
         START HEADER
 ------------------------ */
@@ -72,8 +75,12 @@ body{
     .box-createLegion{width: 14.6972vw; z-index: 20; top: 37vw;}
 }
 
-.box-LegionTxt {}
-.LegionTxt {font-size: 1.54vw; text-transform: uppercase;}
+.LegionTxt {
+    font-size: 1.5vw; 
+    text-transform: uppercase;
+    font-family: "Open Sans", Arial;
+    font-weight: 600;
+}
 @media screen and (max-width: 700px){
     .LegionTxt{font-size: 2.4vw;}
 }
@@ -93,33 +100,40 @@ body{
     align-items: flex-end;
 }
 
-.index-selected {font-size: 1.45vw;} 
-.index-total {font-size: 1.2vw;}
+.index-selected {
+    font-size: 1.45vw; 
+    font-family: "Open Sans", Arial; 
+    font-weight: 600;
+} 
+.index-total {
+    font-size: 1.2vw;
+    font-family: "Open Sans", Arial; 
+    font-weight: 600;}
 @media screen and (max-width: 700px){
     .index-selected{font-size: 2.45vw;}
     .index-total{font-size: 2.2vw;}
 }
 
 .bt-backIndex, .bt-nextIndex{
-    width: 1.2vw;
-    height: 1.2vw;
-    font-size: 1.2vw;
+    padding: .05vw .25vw;
+    font-size: .8vw;
     border-radius: 0;
     border: none;
     outline: none;
     background-color: rgb(169, 189, 193);
     color: black;
+    font-family: "Open Sans", Arial;
+    margin-bottom: .2vw;
+    cursor: pointer;
+    font-weight: 800;
 }
+.bt-backIndex {margin-left: .8vw; margin-right: .5vw;}
 @media screen and (max-width: 700px){
     .bt-backIndex, .bt-nextIndex{
-        width: 2.2vw; 
-        height: 2.2vw;
-        font-size: 2.2vw;
+        padding: .02vw .3vw;
+        font-size: 1.5vw;
     }
 }
-
-.bt-backIndex {margin-left: .8vw; margin-right: .5vw;}
-
 
 /* ------------------------
         START MAIN
@@ -139,7 +153,6 @@ body{
 
 .main-upSide{
     width: 100%;
-    background-color: purple;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -152,25 +165,24 @@ body{
     position: relative;
     width: 92%;
     height: 28vw;
-    background-color: gray;
 }
 @media screen and (max-width: 700px){
     .box-mainInfo{
         flex-direction: column;
-        height: 197vw;
+        height: 195vw;/*197*/
         justify-content: flex-start;
     }
 }
 
 .divider-main{
     display: flex;
-    width: 100%;
+    width: 92%;
     height: .25vw;
-    background-color: black;
+    background-color: #707070;
     margin: 5vw 0;
 }
 @media screen and (max-width: 700px){
-    .divider-main{height: 1.4vw;}
+    .divider-main{height: 1.4vw; width:100%}
 }
 /*
     CARD - HOW TO DOWNLOAD
@@ -183,8 +195,7 @@ body{
     bottom: 0; 
     height: 30.5vw;
     z-index: 2; 
-}
-.box-dwFund{} 
+} 
 .dwFund { width: 20.72916vw;}
 @media screen and (max-width: 700px){
     .box-download{
@@ -192,7 +203,6 @@ body{
         z-index: 0;
         margin-top: 15vw;
         height: 90vw;
-        background-color: aqua;
     }
     .dwFund{width:61.66vw;}
 }
@@ -204,12 +214,14 @@ body{
     position: absolute; 
     top: 5vw;
     width: 60%;
-    background-color: aqua;
 }
 .dwTitle{
     font-size: 2.5vw;
     text-transform: uppercase;
     color: white;
+    text-align: center;
+    font-family: "Open Sans", Arial;
+    font-weight: 600;
 }
 @media screen and (max-width: 700px){
     .dwTitle{font-size: 8vw;}
@@ -219,15 +231,16 @@ body{
     position: absolute;
     top: 13.8vw;
     width: 85%;
-    background-color: green;
 }
 .dwParagraph{
-    font-size: 1.2vw;
-    color: white;
+    font-size: 1.1vw;
+    color: rgba(255, 255, 255, 0.61);
+    font-family: "Open Sans", Arial;
+    font-weight: 300;
 }
 @media screen and (max-width: 700px){
-    .box-dwParagraph{top: 33.8vw}
-    .dwParagraph{ font-size: 5vw;}
+    .box-dwParagraph{top: 36.8vw}
+    .dwParagraph{ font-size: 4.2vw;}
 }
 
 .box-dwBt{
@@ -238,7 +251,8 @@ body{
     width: 60%;
     height: 10%;
 }
-.dwBt{ 
+.dwBt{
+    position: relative; 
     width: 100%; 
     height: 100%;
     background-color: transparent;
@@ -248,10 +262,32 @@ body{
     color: white;
     font-size: 1.2vw;
     text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 5;
+    transition: 1s;
+    font-family: "Open Sans", Arial;
+    font-weight: 400;
 }
+.dwBt:hover{color: black;}
+.dwBt::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1vw;
+    transform: translate(0, -102%);
+    width: 120%;
+    height: 300%;
+    border-radius: 0 0 50% 50%;
+    background-color: white;
+    z-index: -1;
+    transition: 1s;
+}
+.dwBt:hover::before{transform: translate(0, -25%);}
 @media screen and (max-width: 700px){
     .dwBt{font-size: 4vw; border-radius: 1.4vw;}
 }
+
 /*
     ABOUT THE GAME
 */
@@ -260,7 +296,6 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    background-color: yellow;
     width: 49.47916vw;
     height: 15vw;
 }
@@ -279,32 +314,35 @@ body{
     align-items: flex-end;
     text-align: end;
     width: 55%;
-    background-color: green;
 }
-.mainInfo-title{ font-size: 2.2vw;}
-.mainInfo-paragraph{ font-size: 1.2vw;}
+.mainInfo-title{ 
+    font-size: 1.6vw; 
+    font-family: "Open Sans", Arial;
+    text-transform: uppercase;
+    width: 12vw;
+}
+.mainInfo-paragraph{ font-size: 1.14vw; font-family: "Open Sans", Arial;}
 @media screen and (max-width: 700px){
     .mainInfo-txt{
         order: 2;
         width: 100%;
-        margin-top: 2vw;
+        margin-top: 3vw;
     }
-    .mainInfo-title{font-size: 6.5vw;}
-    .mainInfo-paragraph{font-size: 4.5vw;}
+    .mainInfo-title{font-size: 4vw; width:30vw;}
+    .mainInfo-paragraph{font-size: 3.9vw;}
 }
 
 .divider-mainInfo{
-    width: 35%;
+    width: 9.114583vw;
     height: .25vw;
     margin: .8vw 0;
     background-color: black;
 }
 @media screen and (max-width: 700px){
-    .divider-mainInfo{width: 50%; height: .7vw;}
+    .divider-mainInfo{width: 40.27vw; height: .7vw;}
 }
 
 .mainInfo-Img{
-    background-color: plum;
     display: flex;
     align-items: flex-end;
     width: 40%;
@@ -323,7 +361,6 @@ body{
 .main-bottomSide{
     position: relative;
     width: 100%;
-    background-color: purple;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -335,7 +372,6 @@ body{
     position: relative;
     width: 92%;
     height: 39.75vw;
-    background-color: gray;
 }
 @media screen and (max-width: 700px){
     .box-gameStructure{width: 100%;}
@@ -363,19 +399,19 @@ body{
     flex-direction: column;
     align-items: flex-end;
     width: 49.5%;
-    background-color: yellow;
 }
 
 .box-menuTitle{
     display: flex;
     justify-content: flex-end;
     width: 26.927083vw;
-    background-color: turquoise;
 }
 .menuTitle{ 
-    font-size: 3.5vw; 
+    font-size: 3.8vw; 
     text-transform: uppercase;
     text-align: end;
+    font-family: "Open Sans", Arial;
+    font-weight: 600;
 }
 @media screen and (max-width: 700px){
     .menuTitle{font-size: 4vw;}
@@ -388,8 +424,8 @@ body{
     justify-content: space-evenly;
     width: 26.927083vw;
     height: 27.2vw;
-    background-color: green;
     list-style: none;
+    z-index: 2;
 }
 @media screen and (max-width: 700px){
     .menu{width: 40.55vw}
@@ -397,18 +433,27 @@ body{
 
 .menu-items{
     display: flex;
-    background-color: chocolate;
-    height: 3vw;
 }
 
-.menu-items a{
-    background-color: darkblue;
+.items{
+    position: relative;
     text-decoration: none;
-    font-size: 2.3vw;
+    font-size: 1.5vw;
+    color: black;
+    width: 27vw;
+    text-align: end;
+    z-index: 2;
+    overflow: hidden;
+    font-family: "Open Sans", Arial;
+    text-transform: uppercase;
+    padding:.2vw 0;
+}
+.items:hover{
     color: white;
+    background-color: #D74430;
 }
 @media screen and (max-width: 700px){
-    .menu-items a{font-size: 3.2vw;}
+    .items{font-size: 2.1vw; width: 38vw;}
 }
 
 /* ------------------------
@@ -425,10 +470,12 @@ body{
     text-transform: uppercase;
     color: white;
     font-size: 2.5vw;
+    font-family: "Sovereign";
+    font-weight: 300;
 }
 @media screen and (max-width: 700px){
     .box-attributesTitle{display: flex; align-items: center; justify-content: center;}
-    .attributes-title{font-size: 3.5vw;}
+    .attributes-title{font-size: 4vw;}
 }
 
 .box-gallery{
@@ -437,9 +484,15 @@ body{
     flex-wrap: wrap;
     width: 100%;
 }
-.img-battleFront{width: 42.9166vw;}
+
+.box-img-battleFront{
+    width: 42.9166vw;
+    position: relative; 
+    overflow: hidden;
+}
+.img-battleFront{width: 100%; height: 100%;}
 @media screen and (max-width: 700px){
-    .img-battleFront{width: 100%;}
+    .box-img-battleFront{width: 100%;}
 }
 
 .gallery{
@@ -448,16 +501,158 @@ body{
     flex-wrap: wrap;
     width: 50%;
 }
-.img-stormTrooper{width: 21.35416vw;}
-.img-starGame{width: 21.35416vw;}
-.img-naves{width: 21.35416vw;}
-@media screen and (max-width: 700px){
-    .img-stormTrooper, .img-starGame, 
-    .img-naves, .gallery{width: 100%;}
+.box-items-img{
+    width: 21.35416vw; 
+    position: relative; 
+    overflow: hidden;
+}
+.items-img{width: 100%; height: 100%;}
+@media screen and (max-width: 700px){ 
+    .box-items-img, .gallery{width: 100%;}
 }
 
-.hierarchyTrooper{width: 100%; margin-top: 4vw;}
+/*
+    IMG EFECTS 
+*/
+.box-img-efects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d7433083;
+    transform: translateY(103%);
+}
+.box-items-img:hover .box-img-efects{transform: translateY(0); transition: .5s;}
+.box-img-battleFront:hover .box-img-efects{transform: translateY(0); transition: .5s;}
 
+.img-efects-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 100%;
+}
+.img-efects-title{
+    font-family: Sovereign, Arial;
+    font-weight: 300;
+    color: white;
+    width: 6.40625vw;
+    width: 40%;
+    font-size: 1.3vw;
+    margin-top: 1vw;
+}
+@media screen and (max-width: 700px){ 
+    .img-efects-title{font-size: 4.3vw;}
+}
+
+.img-efects-paragraph{
+    font-family: "Open Sans", Arial;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.692);
+    width: 17.34375vw;
+    font-size: .84vw;
+}
+@media screen and (max-width: 700px){ 
+    .img-efects-paragraph{font-size: 2.84vw; width: 60vw;}
+}
+
+.bt-img-efects{
+    position: relative;
+    outline:none;
+    background-color: transparent;
+    color: white;
+    border-radius: 0;
+    border: .15vw solid white;
+    padding: .5vw 2vw;
+    font-size: 1.2vw;
+    z-index: 5;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s;
+}
+@media screen and (max-width: 700px){ 
+    .bt-img-efects{font-size: 3.2vw; padding: 2vw 6vw;}
+}
+
+.bt-img-efects::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1vw;
+    transform: translate(0, -102%);
+    width: 120%;
+    height: 300%;
+    border-radius: 0 0 50% 50%;
+    background-color: white;
+    z-index: -1;
+    transition: .5s;
+}
+.bt-img-efects:hover{color: black; transition: 1s;}
+.bt-img-efects:hover::before{transform: translate(0, 0); transition: 1s;}
+
+.frame-top{position: absolute; top: 0; left: 0;}
+.frame-top::before{
+    position: absolute;
+    content: "";
+    width: .2vw;
+    height: 3vw;
+    background-color: #fff;
+}
+.frame-top::after{
+    position: absolute;
+    content: "";
+    width: 3vw;
+    height: .2vw;
+    background-color: #fff;
+}
+
+.frame-bottom{position: absolute; bottom: 0; right: 0;}
+.frame-bottom::before{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: .2vw;
+    height: 3vw;
+    background-color: #fff;
+}
+.frame-bottom::after{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: 3vw;
+    height: .2vw;
+    background-color: #fff;
+}
+@media screen and (max-width: 700px){ 
+    .frame-top::before, .frame-bottom::before{
+        width: .6vw;
+        height: 8vw;
+    }
+
+    .frame-top::after, .frame-bottom::after{
+        width: 8vw;
+        height: .6vw;
+    }
+}
+/**/
+
+.box-hierarchy{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hierarchyTrooper{width: 86vw; margin-top: 4vw;}
+@media screen and (max-width: 700px){ 
+    .hierarchyTrooper{width: 100%;}
+}
 
 .box-safetyRules{
     display: flex;
@@ -468,27 +663,42 @@ body{
 }
 
 .safetyRules-paragraph{
+    font-family: "Open Sans", Arial;
     width: 42.2916vw; 
-    color:#FFFFFF;
-    font-size: 1.1vw;
+    color:rgba(255, 255, 255, 0.61);
+    font-size: .9vw;
     text-align: end;
 }
-
+@media screen and (max-width: 700px){ 
+    .safetyRules-paragraph{font-size: 2.1vw; width: 62.22vw;}
+}
 /* ------------------------
     START HOW TO PLAY
 ------------------------ */
 .box-howPlay{
     width: 100%;
     margin-bottom: 10vw;
+    position: relative;
+}
+@media screen and (max-width: 700px){ 
+    .box-howPlay{padding-bottom: 12vw;};
 }
 
 .box-captain{
+    display: flex;
+    align-items: flex-end;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 27.96875vw;
 }
 .img-captain{width: 100%;}
+@media screen and (max-width: 700px){ 
+    .box-captain{
+        width: 105vw;
+        left: -42.8vw;
+    };
+}
 
 .box-howPlay-txt{
     display: flex;
@@ -498,63 +708,122 @@ body{
     bottom: 27vw;
     width: 100%;
 }
-.howPlay-txt{color: white; font-size: 3.5vw;}
+.howPlay-txt{
+    color: white; 
+    font-size: 2.7vw; 
+    font-family: "Open Sans", Arial;
+    margin-left: 8vw;
+    text-transform: uppercase;
+}
+@media screen and (max-width: 700px){ 
+    .box-howPlay-txt{justify-content: flex-end; bottom: 124vw;}
+    .howPlay-txt{font-size: 3.6vw; margin-right: 6vw;}
+}
 
 .box-tutorial{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;    
-    width: 100%;   
-    background-color: purple;
+    justify-content: flex-end;
 }
 
-.steps{
+.box-step{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    justify-content: space-between;    
+    justify-content: space-between;
     width: 65%;
-    height: 22vw;   
-    background-color: yellow;
+    height: 22vw;  
+}
+@media screen and (max-width: 700px){ 
+    .box-step{
+        flex-direction: column; 
+        height: 120vw;
+        justify-content: space-evenly;
+    }
 }
 
-.step-1{
+.step{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: 13.5416vw;
-    background-color: aqua;
 }
-.order{font-size: 3.2vw;}
-.bt-download{
+@media screen and (max-width: 700px){ 
+    .step{width: 40.55vw;}
+}
+
+.order{
+    font-size: 3vw; 
+    font-family: "Open Sans", Arial;
+    font-weight: 300;
+}
+.bt-step:hover .order{font-weight: 900;}
+
+.bt-step{
+    position: relative;
     width: 100%;
     height: 3.8vw;
     outline: none;
     border: none;
     color: white;
+    border-radius: 0;
     background-color: #000000;
     text-transform: uppercase;
     font-size: 1.4vw;
     margin: 1vw 0;
+    z-index: 5;
+    overflow: hidden;
+    font-family: "Open Sans", Arial;
+    font-weight: 300;
+    cursor: pointer;
 }
-.step-paragraph{width:9.166vw; font-size: 1.2vw;}
+.bt-step::before, .underline::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #D74430;
+    z-index: -1;
+    transform: translateX(102%);
+    transition: .5s;
+}
+.bt-step:hover::before {transform: translateX(0);}
+.bt-step:hover .underline::before{transform: translateX(0);}
+
+.step-paragraph{width:9.166vw; font-size: 1vw;  font-family: "Open Sans", Arial;}
+.step-paragraph.choose{width: 50%;}
+.step-paragraph.conquest{width: 40%;}
 .underline{
+    position: relative;
     width: 40%; 
     height: .45vw;
     background-color: black;
     margin-top: 1vw;
+    z-index: 5;
+    transition: .7s;
+    overflow: hidden;
 }
-
+@media screen and (max-width: 700px){ 
+    .order{font-size: 4.8vw;}
+    .bt-step{height: 12vw; font-size: 3.2vw;}
+    .step-paragraph{font-size: 3vw; width: 34.16vw;}
+    .underline{height: 1.45vw;}
+}
 /* ------------------------
     START FOOTER
 ------------------------ */
 .box-footer{
     position: relative;
     width: 63.9583vw;
-    background-color: red;
+    background-color: #FF5A56;
     height: 45vw;
+}
+@media screen and (max-width: 700px){
+    .box-footer{width: 100%; height: auto;}
 }
 
 .box-darthVader{
@@ -564,3 +833,108 @@ body{
     width: 39.375vw;
 }
 .img-darthVader{width: 100%;}
+@media screen and (max-width: 700px){
+    .box-darthVader{top: 132vw; left: 8vw; width: 83.8vw;}
+}
+
+
+.content-footer{
+    width: 27.916vw;
+    margin-left: 6.2vw;
+}
+@media screen and (max-width: 700px){
+    .content-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 86vw;
+        margin: auto;
+    }
+}
+
+.footer-title{
+    font-family: "Sovereign";
+    font-weight: 300;
+    font-size: 2.5vw;
+    color: white;
+    padding-top: 7vw;
+    padding-bottom: 3.5vw;
+}
+@media screen and (max-width: 700px){
+    .footer-title{font-size: 15vw; text-align: center;}
+}
+
+.footer-paragraph{
+    font-family: "Open Sans", Arial;
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.61);
+    font-weight: 300;
+}
+@media screen and (max-width: 700px){
+    .footer-paragraph{font-size: 4vw;}
+}
+
+.box-bt{
+    margin-top: 2vw;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 700px){
+    .box-bt{margin-top: 4.5vw;}
+}
+.bt-google-play, .bt-app-store{width: 48%;}
+.img-google-play, .img-app-store{width: 100%;}
+
+
+.divider-footer{
+    width: 100%; 
+    height: .3vw; 
+    background-color: #D74430;
+    margin: 4vw 0;
+}
+@media screen and (max-width: 700px){
+    .divider-footer{
+        height: 1.25vw;
+        margin-top: 3vw;
+        margin-bottom: 8vw;
+    }   
+}
+
+.logo-footer{width: 13.4375vw;}
+@media screen and (max-width: 700px){
+    .logo-footer{width: 46.25vw;}
+}
+
+.box-policies-txt{margin-top: 1vw;}
+.policies-txt{ 
+    font-family: "Open Sans", Arial;
+    font-size: 1vw;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.61);
+}
+@media screen and (max-width: 700px){
+    .box-policies-txt{margin-top: 3vw; padding-bottom: 56vw;}
+    .policies-txt{font-size: 4vw;}
+}
+
+.box-copyright-txt{
+    position: absolute;
+    bottom: 1.2vw;
+    left: 69vw;
+    width: 19.47916vw;
+}
+.copyright-txt{
+    font-family: "Open Sans", Arial;
+    font-size: 0.8vw;
+    color: black;
+    font-weight: 600;
+}
+@media screen and (max-width: 700px){
+    .box-copyright-txt{
+        left: 11vw; 
+        top: 242vw; 
+        width: 83.8vw;
+        height: 20vw;
+    }
+    .copyright-txt{font-size: 2.5vw;}
+}

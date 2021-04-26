@@ -9,7 +9,7 @@
     <title>Star Wars</title>
 </head>
 
-<body>
+<body onload="Start();">
     <header class="box-header">
         <div class="box-imgStar">
             <img class="imgStar" src="Assets/star@2x.png" alt="img_Star">
@@ -26,17 +26,17 @@
         <section class="box-createLegion">
             <div class="box-LegionTxt">
                 <p class="LegionTxt">crie</p>
-                <p class="LegionTxt">sua legião</p>
+                <p class="LegionTxt">sua <span>legião</span></p>
             </div>
 
             <div class="divider-legion"></div>
 
             <div class="box-index">
-                <p class="index-selected">01</p>
+                <p id="a" class="index-selected">01</p>
                 <p class="index-total">/04</p>
 
-                <input class="bt-backIndex" type="button" value="<">
-                <input class="bt-nextIndex" type="button" value=">">
+                <input onclick="IndexBack();" class="bt-backIndex" type="button" value=&#60;>
+                <input onclick="IndexNext();" class="bt-nextIndex" type="button" value=&#62;>
             </div>
         </section>
     </header>
@@ -63,9 +63,9 @@
                         </div><!--box-dwParagraph-->
 
                         <div class="box-dwBt">
-                            <input class="dwBt" type="button" value="download">
+                            <button class="dwBt">download</button>
                         </div><!--box-dwBt-->
-                    </section>
+                    </section><!--box-download-->
 
                     <section class="mainInfo">
                         <div class="mainInfo-txt">
@@ -83,36 +83,38 @@
                             <img class="infoImg" src="Assets/star wars frente de batalha@2x.png"
                                 alt="img_starWars_batalha_de_frente">
                         </div><!--mainInfo-Img-->
-                    </section>
+                    </section><!--mainInfo-->
                 </div><!--box-mainInfo-->
+
+                <div class="divider-main"></div>
             </div><!--box-upSide-->
-            
-           <div class="divider-main"></div>
-           
+
+
             <div class="main-bottomSide">
                 <div class="box-gameStructure">
                     <div class="box-personSifh">
                         <img class="personSifh" src="Assets/lord sifh 2@2x.png" alt="img_lordSifh">
-                    </div>
-                    <dib class="box-personRey">
+                    </div><!--box-personSifh-->
+                    <div class="box-personRey">
                         <img class="personRey" src="Assets/rey star wars@2x.png" alt="img_personRey">
-                    </dib>
-                
+                    </div><!--box-personRey-->
+                    
                     <nav class="box-mainMenu">
                         <div class="box-menuTitle">
-                            <h1 class="menuTitle">estrutura de jogo</h1>
-                        </div>
-
+                            <h1 class="menuTitle">estrutura de <span>jogo</span></h1>
+                        </div><!--box-menuTitle-->
+                        
                         <ul class="menu">
-                            <li class="menu-items"><a href="">jornada</a></li>
-                            <li class="menu-items"><a href="">a batalha do guerreiro estelar</a></li>
-                            <li class="menu-items"><a href="">Heróis contra os vilões</a></li>
-                            <li class="menu-items"><a href="">a batalha galática</a></li>
-                            <li class="menu-items"><a href="">superioridade</a></li>
-                            <li class="menu-items"><a href="">fliperama</a></li>
+                            <li class="menu-items"><a class="items" href="">jornada</a></li>
+                            <li class="menu-items"><a class="items" href="">a batalha do guerreiro estelar</a></li>
+                            <li class="menu-items"><a class="items" href="">Heróis contra os vilões</a></li>
+                            <li class="menu-items"><a class="items" href="">a batalha galática</a></li>
+                            <li class="menu-items"><a class="items" href="">superioridade</a></li>
+                            <li class="menu-items"><a class="items" href="">fliperama</a></li>
                         </ul>
                     </nav>
-                </div>
+                </div><!--box-gameStructure-->
+            </div><!--main-bottomSide-->
         </div><!--container-->
     </main>
 
@@ -120,71 +122,229 @@
         <div class="container">
             <div class="box-attributesTitle">
                 <h2 class="attributes-title">atributos</h2>
-            </div>
-            
+            </div><!--box-attributesTitle-->
+
             <div class="box-gallery">
-                <img class="img-battleFront" src="Assets/134840-games-review-star-wars-battlefront-review-image1-NkRao9Jw12@2x.png" alt="img_starWars_batalha">
+                <div class="box-img-battleFront">
+                    <img class="img-battleFront"
+                    src="Assets/134840-games-review-star-wars-battlefront-review-image1-NkRao9Jw12@2x.png"
+                    alt="img_starWars_batalha">
+
+                    <div class="box-img-efects">
+                        <div class="img-efects-container">
+                            <h3 class="img-efects-title">novos graficos</h3>
+                            <p class="img-efects-paragraph">
+                                Uma garantia endossa latentemente multa de acionista,
+                                mesmo levando em consideração.</p>
+
+                            <button class="bt-img-efects">Leia mais</button>
+                            <div class="frame-top"></div>
+                            <div class="frame-bottom"></div>
+                        </div><!--img-efects-container-->
+                    </div><!--box-img-efects-->
+                </div><!--box-img-battleFront-->
+
                 <div class="gallery">
-                    <img class="img-stormTrooper" src="Assets/Security_stormtrooper_HUC2-FF-003301@2x.png" alt="img_stormTrooper">
-                    <img class="img-starGame" src="Assets/star game@2x.png" alt="img_starWars_game">
-                    <img class="img-naves" src="Assets/naves em batalha star wars@2x.png" alt="img_naves_em_batalaha">
-                    <img class="img-naves" src="Assets/stormtrup@2x.png" alt="img_naves_em_batalaha">
-                </div>
-                <img class="hierarchyTrooper" src="Assets/star-wars_stormtrooper_hierarquia@2x.png" alt="img_stormTrooper_hierarquia">
-            </div> 
-            
+
+                    <div class="box-items-img">
+                        <img class="items-img" src="Assets/Security_stormtrooper_HUC2-FF-003301@2x.png"
+                            alt="img_stormTrooper">
+
+                        <div class="box-img-efects">
+                            <div class="img-efects-container">
+                                <h3 class="img-efects-title">novos graficos</h3>
+                                <p class="img-efects-paragraph">
+                                    Uma garantia endossa latentemente multa de acionista,
+                                    mesmo levando em consideração.</p>
+
+                                <button class="bt-img-efects">Leia mais</button>
+                                <div class="frame-top"></div>
+                                <div class="frame-bottom"></div>
+                            </div><!--img-efects-container-->
+                        </div><!--box-img-efects-->
+                    </div><!--box-items-img-->
+
+                    <div class="box-items-img">
+                        <img class="items-img" src="Assets/star game@2x.png" alt="img_starWars_game">
+
+                        <div class="box-img-efects">
+                            <div class="img-efects-container">
+                                <h3 class="img-efects-title">novos graficos</h3>
+                                <p class="img-efects-paragraph">
+                                    Uma garantia endossa latentemente multa de acionista,
+                                    mesmo levando em consideração.</p>
+
+                                <button class="bt-img-efects">Leia mais</button>
+                                <div class="frame-top"></div>
+                                <div class="frame-bottom"></div>
+                            </div><!--img-efects-container-->
+                        </div><!--box-img-efects-->
+                    </div><!--box-items-img-->
+
+                    <div class="box-items-img">
+                        <img class="items-img" src="Assets/naves em batalha star wars@2x.png"
+                            alt="img_naves_em_batalaha">
+
+                        <div class="box-img-efects">
+                            <div class="img-efects-container">
+                                <h3 class="img-efects-title">novos graficos</h3>
+                                <p class="img-efects-paragraph">
+                                    Uma garantia endossa latentemente multa de acionista,
+                                    mesmo levando em consideração.</p>
+
+                                <button class="bt-img-efects">Leia mais</button>
+                                <div class="frame-top"></div>
+                                <div class="frame-bottom"></div>
+                            </div><!--img-efects-container-->
+                        </div><!--box-img-efects-->
+                    </div><!--box-items-img-->
+
+                    <div class="box-items-img">
+                        <img class="items-img" src="Assets/stormtrup@2x.png" alt="img_naves_em_batalaha">
+
+                        <div class="box-img-efects">
+                            <div class="img-efects-container">
+                                <h3 class="img-efects-title">novos graficos</h3>
+                                <p class="img-efects-paragraph">
+                                    Uma garantia endossa latentemente multa de acionista,
+                                    mesmo levando em consideração.</p>
+
+                                <button class="bt-img-efects">Leia mais</button>
+                                <div class="frame-top"></div>
+                                <div class="frame-bottom"></div>
+                            </div><!--img-efects-container-->
+                        </div><!--box-img-efects-->
+                    </div><!--box-items-img-->
+                
+                </div><!--gallery-->
+            </div><!--box-gallery-->
+        </div><!--container-->
+
+        <div class="box-hierarchy">
+            <img class="hierarchyTrooper" src="Assets/star-wars_stormtrooper_hierarquia@2x.png"
+                alt="img_stormTrooper_hierarquia">
+        </div><!--box-hierarchy-->
+
+        <div class="container">
             <div class="box-safetyRules">
                 <p class="safetyRules-paragraph">
-                    Em normas especiais sobre o assunto, ressalta-se que a legislação 
-                    é deliberadamente preceito judicial do faturamento dos negócios, excluindo o princípio 
+                    Em normas especiais sobre o assunto, ressalta-se que a legislação
+                    é deliberadamente preceito judicial do faturamento dos negócios, excluindo o princípio
                     da presunção de inocência.
                 </p>
-            </div>
-        </div>
-    </section>
+            </div><!--box-safetyRules-->
+        </div><!--container-->
+    </section><!--box-attributes-->
 
     <section class="box-howPlay">
+        <div class="box-captain">
+            <img class="img-captain" src="Assets/stortm_trooper_capa_preta-removebg-preview@2x.png"
+                alt="img_stormTrooper_Capitao">
+        </div><!--box-captain-->
         <div class="container">
-            <div class="box-captain">
-                <img class="img-captain" src="Assets/stortm_trooper_capa_preta-removebg-preview@2x.png" alt="img_stormTrooper_Capitao">
-            </div>
-            
+
             <div class="box-howPlay-txt">
-                <h2 class="howPlay-txt">como jogar?</h2>
-            </div>
-        
+                <h2 class="howPlay-txt">como jogar ?</h2>
+            </div><!--box-howPlay-txt-->
+
             <div class="box-tutorial">
-                <div class="steps">
-                    <div class="step-1">
-                        <h2 class="order">1</h2>
-                        <input class="bt-download" type="button" value="download">
+                <div class="box-step">
+                    <div class="step">
+                        <h2 class="order">01</h2>
+                        <button class="bt-step">download</button>
                         <p class="step-paragraph">Baixe o jogo e crie o nome de usuario</p>
                         <div class="underline"></div>
-                    </div>
-                    
-                    <div class="step-1">
-                        <h2 class="order">2</h2>
-                        <input class="bt-download" type="button" value="escolher">
-                        <p class="step-paragraph">Selecione o tipo de jogo</p>
+                    </div><!--step-->
+
+                    <div class="step">
+                        <h2 class="order">02</h2>
+                        <button class="bt-step">escolher</button>
+                        <p class="step-paragraph choose">Selecione o tipo de jogo</p>
                         <div class="underline"></div>
-                    </div>
-                    
-                    <div class="step-1">
-                        <h2 class="order">3</h2>
-                        <input class="bt-download" type="button" value="explorar">
-                        <p class="step-paragraph">Conquiste a galáxia</p>
+                    </div><!--step-->
+
+                    <div class="step">
+                        <h2 class="order">03</h2>
+                        <button class="bt-step">explorar</button>
+                        <p class="step-paragraph conquest">Conquiste a galáxia</p>
                         <div class="underline"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    </div><!--step-->
+                </div><!--box-step-->
+            </div><!--box-tutorial-->
+
+        </div><!--container-->
+    </section><!--box-howPlay-->
 
     <footer class="box-footer">
-            <div class="box-darthVader">
-                <img class="img-darthVader" src="Assets/darth_vader-sem fundo@2x.png" alt="img_darthVader">
-            </div>
+        <div class="box-darthVader">
+            <img class="img-darthVader" src="Assets/darth_vader-sem fundo@2x.png" alt="img_darthVader">
+        </div><!--box-darhVader-->
+
+        <div class="box-copyright-txt">
+            <p class="copyright-txt">
+                Layout produzido por Vai na Web para fins exclusivamente educacionais. Referência:
+                https://in.pinterest.com/pin/337347828330561824/
+            </p>
+        </div><!--box-copyright-txt-->
+
+        <div class="content-footer">
+            <div class="box-footer-txt">
+                <h2 class="footer-title">aplicativo</h2>
+                <p class="footer-paragraph">
+                    Comunidade adversária, é claro, como sempre imprevisível.
+                    A competitividade, à primeira vista, cria um conjunto sociométrico de publicações leais.
+                </p>
+            </div><!--box-footer-txt-->
+
+            <div class="box-bt">
+                <a class="bt-google-play" href="https://play.google.com/store?hl=pt_BR&gl=US">
+                    <img class="img-google-play" src="assets/disponivel-google-play-badge@2x.png"
+                        alt="icon_google_play">
+                </a>
+
+                <a class="bt-app-store" href="https://www.apple.com/br/app-store/">
+                    <img class="img-app-store" src="assets/baixar-na-app-store-botao-2-1024x304@2x.png"
+                        alt="icon_app_store">
+                </a>
+            </div><!--box-bt-->
+
+            <div class="divider-footer"></div>
+
+            <div class="box-logo-footer">
+                <img class="logo-footer" src="assets/esta uo@2x.png" alt="logo_star_wars">
+            </div><!--box-logo-footer-->
+
+            <div class="box-policies-txt">
+                <p class="policies-txt">
+                    Políticas internacionais, na verdade significa um funcional
+                    tipo de cultura política da Europa continental. É bem sabido
+                    que o nacionalismo democrático-cristão simboliza o existencial.</p>
+            </div><!--box-policies-txt-->
+        </div><!--content-footer-->
     </footer>
+    
+    <script>
+        var indexNum = 1; 
+        
+        function Start(){
+            setInterval(function() {
+                var index = document.getElementById("a").innerHTML = "0" + indexNum;
+                
+                if(index > 4)
+                    indexNum = 1;
+                else if(index < 1)
+                    indexNum = 4;
+            }, 1);
+        }
+
+        function IndexNext(){
+            indexNum++;
+        } 
+
+        function IndexBack(){
+            indexNum--;
+        }
+    </script>
 </body>
 
 </html>
