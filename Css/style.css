@@ -743,6 +743,21 @@ span{font-weight: 800;}
     }
 }
 
+/*  
+    STEP BIG 
+*/
+.img-efects-container.big{width: 80%;}
+.img-efects-title.big{font-size: 3vw;}
+.img-efects-paragraph.big{font-size: 1.5vw; width: 100%;}
+.bt-img-efects.big{padding: .8vw 3vw; font-size: 2vw;}
+/**/
+@media screen and (max-width: 700px){ 
+    .img-efects-container.big{width: auto}
+    .img-efects-title.big{width: 40%; font-size: 4.3vw;}
+    .img-efects-paragraph.big{font-size: 2.84vw; width: 60vw;}
+    .bt-img-efects.big{font-size: 3.2vw; padding: 2vw 6vw;}
+}
+
 .step{
     display: flex;
     flex-direction: column;
